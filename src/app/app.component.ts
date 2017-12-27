@@ -18,7 +18,6 @@ export class MyApp {
 
   public pages: Array<{title: string,component: any,index:number}>;
   rootPage:any;
-  private router=[];
   
   constructor(platform: Platform,
               statusBar: StatusBar, 
