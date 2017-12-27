@@ -7,7 +7,7 @@ import { IndustryInfoPage } from '../pages/industryInfo/industryInfo';
 import { ServiceSingletonProvider } from '../providers/service-singleton/service-singleton';
 import { SignInPage } from '../pages/SignIn/SignIn';
 import { AdminProfilePage } from '../pages/AdminProfile/AdminProfile';
-import { AddIndustryUserPage } from '../pages/AddIndustryUser/AddIndustryUser'
+//import { AddIndustryUserPage } from '../pages/AddIndustryUser/AddIndustryUser'
 
 @Component({
   selector:'app-container',
