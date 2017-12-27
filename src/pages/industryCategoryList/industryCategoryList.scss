@@ -1,0 +1,220 @@
+page-industryCategoryList{
+    
+  .width-style{
+    margin-bottom: 5px;
+   }
+   .quater-size{
+     height: 25%;
+     display: inline-block;
+   }
+   .quater{
+     height: 25%;
+     position: relative;
+   }
+   .col{
+     padding: 0px;
+     display: inline-flex;
+   }
+   .myMsg-Icon{
+     margin-right: 10px;
+     float: right;
+     width: 25px;
+     height: 20px;
+   }
+   .badge-myMsg{
+     position: absolute;
+     right: 0;
+     margin-right: 32px;
+     margin-top: -5px;
+     background-color: #f5821f !important;
+     float:right;
+     border-radius: 50% ! important;
+     padding: 3px 6px;
+   }
+   .timetable-card-content{
+     padding: 0px;
+     padding-bottom: 1px;
+   }
+   .white-background{
+     background: white;
+ 
+   }
+   .dashboard-tiles{
+     background: color($colors,bluegreen);
+     height: 100% !important;
+   }
+   .dashboard-tiles-header{
+     padding-top: 25px;
+     padding-bottom: 0px;
+     padding-right: 0px;
+ 
+   }
+   .dashboard-tiles-sub-heading{
+     color: white;
+     margin-top: 5px;
+   }
+   .my-icons{
+     margin: 0 auto;
+     height: 12vw;
+     width: 12vw;
+     background-size: cover;
+ 
+   }
+   .badge-orange{
+     float: right;
+     border-radius: 0 !important;
+     background-color: #f5821f !important;
+   }
+ 
+   .header-background{
+     background: color($colors,bluegreen);
+     color: white;
+     padding: 0px;
+   }
+   .timetable-image{
+     margin-top: 1vw;
+     height: 4vw;
+     width: 4vw;
+     float: left;
+     display: inline-block;
+ 
+   }
+   .card-md{
+     margin: 0 auto;
+ 
+   }
+   .timetable-Course{
+     margin-top: 1vw;
+     font-size: 14px;
+     color:darkgray;
+     float: left;
+     display: inline-block;
+   }
+ 
+   .timetable-Heading{
+     font-size: 14px;
+     color:darkgrey;
+   }
+ 
+   .timetable-Subheading{
+     font-size: 11px;
+     color:darkgrey;
+     overflow: visible;
+ 
+   }
+ 
+   .timetable-div{
+ 
+     display: inline-block;
+     height: 50%;
+ 
+   }
+   .timetable-time{
+     display: inline-block;
+     color: white;
+   }
+   .present{
+     color: color($colors,lightbluegreen);
+   }
+   .today-timetable-container{
+     position: relative;
+     height: 25%;
+     padding: 5px;
+     padding-bottom: 10px;
+     background: white;
+     border-bottom: 1px solid #cccccc;
+ 
+   }
+   .today-timetable-heading{
+     margin-left: 10px;
+     margin-top: 5px;
+     margin-bottom: 5px;
+     color: color($colors,lightgray);
+   }
+    .box{
+         width: 50%;
+         float: left;
+         text-align: center;
+         height: 95%;
+ //        display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 14px;
+     }
+     .rows{
+         height: 33%;
+         width: 100%;
+     }
+     .container{
+         height: 75%;
+         width: 100%;
+       padding-top: 10px;
+     }
+   .absent{
+     color: red;
+   }
+   .present{
+     color:green;
+   }
+   .going-on{
+     color: #000000;
+   }
+   .upcoming{
+     color:color($colors,orangecolor);
+   }
+   .not-marked{
+     color:red;
+   }
+   .left-scroll{
+     position: absolute;
+     display: table-cell;
+     vertical-align: middle;
+     margin-top: 20px;
+     z-index: 100;
+     font-size: 7vw;
+     color: rgba(192,192,192,0.7);
+ 
+   }
+   .right-scroll{
+     position: absolute;
+     display: table-cell;
+     vertical-align: middle;
+     margin-top: 20px;
+     margin-right: 5px;
+     right: 0;
+     z-index: 100;
+     font-size: 7vw;
+     color: rgba(192,192,192,0.7);
+   }
+   .width-style{
+     margin-bottom: 1px !important;
+   }
+   .card-ios{
+     margin-top:0px;
+     margin-bottom: 0px;
+   }
+ 
+   .scrollable{
+     overflow-x:scroll ;
+     width: 100%;
+     display: flex;
+     height: 80%;
+     padding: 5px;
+   }
+   .tasks-card{
+     float: left;
+     display: table;
+     width: 45%;
+     height: 100%;
+     margin-left: 3%;
+     text-align: center;
+ 
+   }
+
+   .scroll-content{
+       margin-bottom: 0px!important;
+   }
+
+   .fab-md, .fab-ios{
+    background-color:color($colors,orangecolor);
+   }
+}

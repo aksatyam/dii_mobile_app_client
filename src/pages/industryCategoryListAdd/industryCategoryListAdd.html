@@ -1,0 +1,24 @@
+<ion-header>
+        <ion-navbar>
+            <button ion-button menuToggle>
+                <ion-icon name="list"></ion-icon>
+            </button>
+            <ion-title text-center>
+                {{title}}
+            </ion-title>
+        </ion-navbar>
+</ion-header>
+
+<ion-content class="app-background">
+ <ion-card>
+    <ion-item>
+        <ion-label floating>Industry Category Name</ion-label>
+        <ion-input type="text" [(ngModel)]="categoryName" class="industryCategory"></ion-input>
+    </ion-item>
+    <ion-textarea [(ngModel)]="categoryDesc" placeholder="Description" class="industryCategory"></ion-textarea>
+    <br>
+    <hr>
+    <button ion-button class="btnSave" tappable (click)="SaveIndustry()">Save</button>
+    <button ion-button class="btnClear" tappable (click)="Reset()">Clear</button>
+ </ion-card>
+</ion-content>

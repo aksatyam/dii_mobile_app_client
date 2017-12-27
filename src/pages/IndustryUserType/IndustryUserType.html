@@ -1,0 +1,30 @@
+<ion-header>
+        <ion-navbar>
+            <button ion-button menuToggle>
+                <ion-icon name="list"></ion-icon>
+            </button>
+            <ion-title text-center>
+                {{title}}
+            </ion-title>
+        </ion-navbar>
+        <div class="heading">
+            {{industyDeatils}}
+        </div>
+    </ion-header>
+        
+    <ion-content class="app-background">
+        <ion-refresher (ionRefresh)="doRefresh($event)">
+            <ion-refresher-content></ion-refresher-content>
+        </ion-refresher>
+        <ion-fab top right edge>
+            <button ion-fab mini tappable (click)="addInduUserType()"><ion-icon name="add"></ion-icon></button>
+        </ion-fab>
+        <ion-card *ngFor="let data of IndustryTypeData">
+            <ion-card-header>
+                {{data.user_type}} 
+            </ion-card-header>
+            <ion-card-content>
+                {{data.user_type_description}}
+            </ion-card-content>
+        </ion-card>
+    </ion-content>

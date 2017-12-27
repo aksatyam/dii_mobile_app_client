@@ -1,0 +1,17 @@
+page-IndustryDetails{
+    .heading{
+    background-color: color($colors,bluegreen);
+    color: white;
+    padding:10px;
+    text-align: center;
+    }
+    .CardPadding{
+        padding: 8px;
+    }    
+    .title{
+        color:color($colors,darkgray);
+    }
+    .contentdata{
+        color:color($colors,lightgray);
+    }
+}

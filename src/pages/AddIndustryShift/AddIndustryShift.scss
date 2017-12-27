@@ -1,0 +1,20 @@
+page-AddIndustryShift{
+    .card-md, .card-ios{
+        padding:15px 10px 10px 10px;
+    }
+    .item-md, .item-ios{
+        padding-left: 8px;
+    }
+    .btnSave{
+        background-color:color($colors, bluegreen); 
+    }
+    .btnClear{
+        background-color:color($colors, bluegreen);
+    }
+    .item-md [item-start], .item-ios [item-start]{
+        margin: 0px!important;
+    }
+    .datetime-md, .datetime-ios{
+        padding:0px;
+    }
+}

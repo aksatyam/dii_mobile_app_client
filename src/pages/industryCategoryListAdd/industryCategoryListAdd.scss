@@ -1,0 +1,18 @@
+page-industryCategoryListAdd{
+    .card-md, .card-ios{
+        padding:15px 10px 10px 10px;
+    }
+    .item-md, .item-ios{
+        padding-left: 8px;
+    }
+    .btnSave{
+        background-color:color($colors, orangecolor); 
+    }
+    .btnClear{
+        background-color:color($colors, orangecolor);
+    }
+    .industryCategory{
+        color: color($colors, darkgray);
+        font-size: 16px;
+    }
+}

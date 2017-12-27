@@ -1,0 +1,40 @@
+<ion-header>
+        <ion-navbar>
+            <button ion-button menuToggle>
+                <ion-icon name="list"></ion-icon>
+            </button>
+            <ion-title text-center>
+                {{title}}
+            </ion-title>
+        </ion-navbar>
+    </ion-header>
+        
+    <ion-content class="app-background">
+        <ion-card>
+                <ion-item>
+                    <ion-label floating>UserName</ion-label>
+                    <ion-input type="text" [(ngModel)]="Username"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label>User Type</ion-label>
+                    <ion-select [(ngModel)]="UserType" col-12 placeholder="Select User Type">
+                        <ion-option *ngFor="let type of UserTypeData" value="{{type._id}}">{{type.user_type}}</ion-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-label floating>Contact No</ion-label>
+                    <ion-input type="text" [(ngModel)]="Contact"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label floating>Email</ion-label>
+                    <ion-input type="email" [(ngModel)]="Email"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label floating>Password</ion-label>
+                    <ion-input type="password" [(ngModel)]="Password"></ion-input>
+                </ion-item>                
+                <br>
+                <button ion-button class="btnSave" tappable (click)="SaveIndustry()">Save</button>
+                <button ion-button class="btnClear" tappable (click)="Reset()">Clear</button>
+        </ion-card>
+    </ion-content>

@@ -1,0 +1,28 @@
+page-AddIndustryLot{
+    .select-md .select-icon .select-icon-inner{
+        left: 0px!important;
+    }
+    .select-ios .select-icon .select-icon-inner{
+        left: 0px!important;
+    }
+
+    .select-md, .select-ios{
+        padding-left: 0px!important;
+    }
+    .card-md, .card-ios{
+        padding:15px 10px 10px 10px;
+    }
+    .item-md, .item-ios{
+        padding-left: 8px;
+    }
+    .btnSave{
+        background-color:color($colors, bluegreen); 
+    }
+    .btnClear{
+        background-color:color($colors, bluegreen);
+    }
+
+    .label-md, .label-ios{
+        margin-left: 0px!important;
+    }
+}

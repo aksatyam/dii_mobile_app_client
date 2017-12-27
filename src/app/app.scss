@@ -1,0 +1,352 @@
+// http://ionicframework.com/docs/v2/theming/
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+app-container {
+    font-family: 'Nunito', sans-serif;
+  
+    ion-title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0 10px 1px;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      z-index: -1;
+    }
+    .toolbar-ios ion-title {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  
+    .header-font {
+      font-size: 20px;
+      color: color($colors, darkgray);
+    }
+    .header-content {
+      text-align: ($toolbar-ios-title-text-align)
+    }
+    .content-background {
+      background: color($colors, groundcolor);
+    }
+  
+    .icon-color {
+      color: color($colors, lightgray);
+    }
+    .icon-left {
+      float: left;
+    }
+    .scrollable {
+      overflow-y: scroll;
+    }
+    .avatar {
+      height: 40px;
+      width: 40px;
+      margin: 20px;
+      border-radius: 20px;
+    }
+    .centre-align {
+      width: 100%;
+      height: 200px;
+      margin-left: 0 auto;
+      text-align: center;
+      background: color($colors, bluegreen);
+    }
+    .image-icon {
+  
+      height: 80px;
+      width: 80px;
+      border-radius: 40px;
+    }
+    .btn {
+      background: white;
+      color: color($colors, bluegreen);
+      font-size: smaller;
+      padding: 2px 2px 2px 2px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .user-name {
+      color: #ffffff;
+    }
+  
+    .label-md {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    .navlist-item {
+      vertical-align: middle;
+      color: color($colors, lightgray);
+      padding: 0px;
+    }
+    .nav-icons {
+      margin-left: 20px;
+      margin-right: 10px;
+    }
+    .dashboard-Card {
+      background-color: #0f697a;
+      height: 80%;
+      text-align: center;
+    }
+    .dashboard-CardText {
+      color: white;
+  
+    }
+  
+    .dashboard-Icon {
+      padding: 2px;
+      align-content: center;
+      display: inline-block;
+      //padding-left: something-greater-than-image-width px;
+    }
+    .text-center {
+      text-align: center;
+    }
+  
+    .badge-outer {
+      position: relative;
+    }
+  
+    .description-font {
+      font-size: 12px;
+      color: color($colors, darkgray);
+    }
+    .header-font {
+      font-size: 20px !important;
+      color: color($colors, darkgray) !important;
+    }
+    .header-content {
+      text-align: center;
+    }
+  
+    .scrollable {
+      overflow-y: scroll;
+    }
+  
+    .rms-description-font {
+      font-size: 12px;
+  
+    }
+  
+    .app-background {
+      background-color: #F1f6f9;
+    }
+    .scrollablex {
+      overflow-x: scroll;
+    }
+  
+    .scroll-content {
+  
+      margin-bottom: 56px !important;
+    }
+  
+    .todayTT-Container {
+  
+      background-color: #0f697a;
+  
+      text-align: center;
+    }
+  
+    .myMsg-Icon {
+      width: 30px;
+      height: 24px;
+      float: right;
+    }
+  
+    .badge-outer {
+      position: relative;
+    }
+  
+    .dashboard-Padding {
+      margin-bottom: -15px;
+    }
+  
+    .subheader-font-size {
+      font-size: 14px;
+    }
+  
+    .ann-Placement {
+      background-color: #FAC255;
+      display: inline-block;
+      float: left;
+      color: white;
+      height: 100%;
+    }
+  
+    .ann-DateSpam {
+      padding-left: 5px;
+      font-size: 12px;
+  
+    }
+  
+    .description-font {
+      font-size: 12px;
+      color: color($colors, darkgray);
+    }
+    .header-font {
+      font-size: 20px !important;
+      color: color($colors, darkgray) !important;
+    }
+    .header-content {
+      text-align: center;
+    }
+  
+    .scrollable {
+      overflow-y: scroll;
+    }
+  
+    .rms-description-font {
+      font-size: 12px;
+  
+    }
+  
+    .app-background {
+      background-color: #F1f6f9;
+    }
+  
+    .content-background {
+      background: color($colors, groundcolor);
+    }
+  
+    .icon-color {
+      color: color($colors, lightgray);
+    }
+    .icon-left {
+      float: left;
+    }
+    .scrollablex {
+      overflow-x: scroll;
+    }
+    .label-md {
+      margin-top: 0px;
+      margin-right: 5px;
+      margin-left: 5px;
+      margin-bottom: 0px;
+    }
+    .navlist-item {
+      color: color($colors, lightgray);
+      padding: 0px;
+    }
+    .nav-icons {
+      margin-left: 20px;
+      margin-right: 10px;
+    }
+  
+    .avatar {
+      height: 40px;
+      width: 40px;
+  
+      border-radius: 20px;
+    }
+    .centre-align {
+      width: 100%;
+      padding: 20px;
+      margin-left: 0;
+      text-align: center;
+      background: color($colors, bluegreen);
+    }
+    .nav-profile-info {
+  
+      width: 100%;
+      height: 240px;
+      padding: 20px;
+      margin-left: 0;
+      text-align: center;
+      background: color($colors, bluegreen);
+    }
+    .menu-list {
+      margin-top: 240px;
+      margin-bottom: 50px;
+      width: 100%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      position: fixed;
+      z-index: 0;
+      top: 0;
+      bottom: 0;
+    }
+    .image-icon {
+  
+      height: 80px;
+      width: 80px;
+      border-radius: 40px;
+    }
+    .btn {
+      background: white;
+      color: color($colors, bluegreen);
+      font-size: smaller;
+      padding: 2px 2px 2px 2px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .user-name {
+      color: #ffffff;
+    }
+    .user-degree {
+      color: white;
+    }
+  
+    .logout-btn {
+      position: fixed;
+      bottom: 0;
+  
+      width: 100%;
+      padding: 12px;
+      background: color($colors, orangecolor);
+      color: white;
+      text-align: center;
+  
+    }
+    .label-ios {
+      margin: 0px;
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+    .lightgray {
+      color: color($colors, lightgray);
+    }
+    .darkgray {
+      color: color($colors, darkgray);
+    }
+  
+    .orange {
+      color: color($colors, orangecolor);
+    }
+    .menu-icons {
+      margin-left: 16px;
+  
+      height: 20px;
+      width: 20px;
+    }
+    .bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default {
+      color: color($colors, darkgray);
+    }
+    .toolbar-title-ios {
+      color: color($colors, darkgray);
+    }
+    .no-scroll {
+      .scroll-content {
+        overflow: hidden;
+        position: fixed;
+      }
+    }
+    .list-ios > .item-block:first-child{
+      border-top: 0px;
+    }
+  }
+  
+  
+  

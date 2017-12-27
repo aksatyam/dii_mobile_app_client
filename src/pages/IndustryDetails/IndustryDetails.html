@@ -1,0 +1,98 @@
+    <ion-header>
+        <ion-navbar>
+            <button ion-button menuToggle>
+                <ion-icon name="list"></ion-icon>
+            </button>
+            <ion-title text-center>
+                {{title}}
+            </ion-title>
+        </ion-navbar>
+        <div class="heading">
+            {{industyDeatils}}
+        </div>
+    </ion-header>
+        
+    <ion-content class="app-background">
+        <ion-card class="CardPadding">
+            <ion-row>
+                <ion-col col-4 class="title">
+                    Industry Title
+                </ion-col>
+                <ion-col col-8 class="contentdata">
+                    : {{IndustryData.indu_name}}
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4 class="title">
+                    Owner Name 
+                </ion-col>
+                <ion-col col-8 class="contentdata">
+                    : {{IndustryData.indu_owner}}
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4 class="title">
+                    Description
+                </ion-col>
+                <ion-col col-8 class="contentdata">
+                    : {{IndustryData.indu_description}}
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4 class="title">
+                    Email
+                </ion-col>
+                <ion-col col-8 class="contentdata">
+                    : {{IndustryData.indu_email}}
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4 class="title">
+                    Contact 
+                </ion-col>
+                <ion-col col-8 class="contentdata">
+                    : {{IndustryData.indu_contact}}
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4 class="title">
+                    Address
+                </ion-col>
+                <ion-col col-8 class="contentdata">
+                    : {{IndustryData.indu_address}}
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4 class="title">
+                    City
+                </ion-col>
+                <ion-col col-8 class="contentdata">
+                    : {{IndustryData.indu_city}}
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4 class="title">
+                    State
+                </ion-col>
+                <ion-col col-8 class="contentdata">
+                    : {{IndustryData.indu_state}}
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4 class="title">
+                    Pin
+                </ion-col>
+                <ion-col col-8 class="contentdata">
+                    : {{IndustryData.indu_pin}}
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4 class="title">
+                    Country
+                </ion-col>
+                <ion-col col-8 class="contentdata">
+                    : {{IndustryData.indu_country}}
+                </ion-col>
+            </ion-row>
+        </ion-card>
+    </ion-content>

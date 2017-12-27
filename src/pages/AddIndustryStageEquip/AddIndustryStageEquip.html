@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="list"></ion-icon>
+        </button>
+        <ion-title text-center>
+            {{title}}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+    
+<ion-content class="app-background">
+        <ion-card>
+                <ion-item>
+                    <ion-label floating>Stage Name</ion-label>
+                    <ion-input type="text" [(ngModel)]="StageName"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Select Material</ion-label>
+                    <ion-select [(ngModel)]="Material" col-12 placeholder="Select Material">
+                        <ion-option *ngFor="let material of MaterialsList" value="{{material._id}}">{{material.material_name}}</ion-option>
+                    </ion-select>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Select Equipment </ion-label>
+                    <ion-select [(ngModel)]="Equipment" col-12 placeholder="Select Equipment">
+                        <ion-option *ngFor="let equipment of EquipmentList" value="{{equipment._id}}">{{equipment.equip_name}}</ion-option>
+                    </ion-select>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>Description</ion-label>
+                    <ion-input type="text" [(ngModel)]="Description"></ion-input>
+                </ion-item>
+                <br>
+                <button ion-button class="btnSave" tappable (click)="SaveStageEquip()">Save</button>
+                <button ion-button class="btnClear" tappable (click)="Reset()">Clear</button>
+        </ion-card>
+</ion-content>

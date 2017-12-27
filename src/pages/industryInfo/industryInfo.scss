@@ -1,0 +1,15 @@
+page-industryInfo{
+    .card-md, .card-ios{
+        //padding:10px 10px 10px 10px;
+        color:white;
+        background-color: color($colors, bluegreen);
+    }
+    .item-md, .item-ios{
+        color:white;
+        background-color: color($colors, bluegreen);
+        padding-left: 8px;
+    }
+    .title{
+        font-size: 12px!important;
+    }
+}

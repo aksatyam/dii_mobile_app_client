@@ -1,0 +1,117 @@
+page-SignIn{
+    
+
+
+  .home-heading {
+    background-color: color($colors, bluegreen);
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .floating-text {
+   color: white;
+  }
+
+  .bg-Signin {
+
+    align-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vw;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+    padding-top:20vw;
+    padding-left:10%;
+    padding-right:10%;
+
+  }
+
+  .transparent-bg {
+    background-color: transparent;
+    padding: 0px;
+  }
+
+  .rms-form {
+    background-color: white;
+    margin: 4%;
+    padding: 10px;
+  }
+
+  .upper-text {
+    font-size: 11px;
+    color: color($colors, lightgray);
+  }
+  .lower-text {
+    font-size: 13px;
+    color: color($colors, darkgray);
+  }
+
+  .for-label-text {
+    margin-left: 20px;
+
+  }
+
+  .container {
+    margin: 0 auto;
+    position: relative;
+
+    width: 100%;
+  }
+
+  #btn-submit{
+    margin-top: 20px;
+    background-color: color($colors,orangecolor);
+    height:35px;
+    color: color($colors,white);
+  }
+  #botton-title{
+    position: absolute;
+    width:auto;
+    margin-left: 42%;
+    margin-bottom: 20px;
+    align: center;
+  }
+
+  .lpu-logo{
+    position: relative;
+    border-radius: 50%;
+    border: 1px solid color($colors,bluegreen);
+    max-height:30vw;
+    margin-top: -15vw;
+    z-index: 9999;
+  }
+  .main-container{
+
+  }
+  .quotes-slide{
+    height:180px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    z-index: 5555;
+    bottom: 0;
+    white-space: normal;
+  }
+  .quote{
+    white-space: normal;
+    color:color($colors,darkgray);
+  }
+  .author{
+    white-space: normal;
+    color:color($colors,orangecolor);
+  }
+  .forget{
+    position: absolute;
+    right:0;
+    margin-bottom: 10px;
+    bottom: 0;
+    float: right;
+    color: white !important;
+  }
+  .scroll-content{
+    margin-bottom: 0px!important;
+  }
+}

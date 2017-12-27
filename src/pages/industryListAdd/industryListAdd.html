@@ -1,0 +1,72 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="list"></ion-icon>
+        </button>
+        <ion-title text-center>
+            {{title}}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+    
+<ion-content class="app-background">
+    <ion-card>
+        <ion-item>
+            <ion-label floating class="textColor">Industry Name</ion-label>
+            <ion-input type="text" class="industryCategory" [(ngModel)]="Indu_name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating class="textColor">Industry Type</ion-label>
+            <ion-input type="text" class="industryCategory" [(ngModel)]="Indu_type"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating class="textColor">Email</ion-label>
+            <ion-input type="email" class="industryCategory" [(ngModel)]="Indu_email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating class="textColor">Contact</ion-label>
+            <ion-input type="text" class="industryCategory" [(ngModel)]="Indu_contact"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating class="textColor">Address</ion-label>
+            <ion-input type="text" class="industryCategory" [(ngModel)]="Indu_address"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating class="textColor">City</ion-label>
+            <ion-input type="text" class="industryCategory" [(ngModel)]="Indu_city"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating class="textColor">State</ion-label>
+            <ion-input type="text" class="industryCategory" [(ngModel)]="Indu_state"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating class="textColor">Pin</ion-label>
+            <ion-input type="text" class="industryCategory" [(ngModel)]="Indu_pin"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating class="textColor">Country</ion-label>
+            <ion-input type="text" class="industryCategory" [(ngModel)]="Indu_country"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating class="textColor">Industry Owner-Name</ion-label>
+            <ion-input type="text" class="industryCategory" [(ngModel)]="Indu_ownerName"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating class="textColor">Staff Count</ion-label>
+            <ion-input type="text" class="industryCategory" [(ngModel)]="Indu_staffCount"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating class="textColor">Description</ion-label>
+            <ion-input type="text" class="industryCategory" [(ngModel)]="Indu_desc"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating class="textColor">Estd. Year</ion-label>
+            <ion-input type="text" class="industryCategory" [(ngModel)]="Indu_estdYear"></ion-input>
+        </ion-item>
+        <br>
+        <hr>
+        <button ion-button class="btnSave" tappable (click)="SaveIndustry()">Save</button>
+        <button ion-button class="btnClear" tappable (click)="Reset()">Clear</button>
+    </ion-card>
+</ion-content>

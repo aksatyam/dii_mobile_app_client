@@ -1,0 +1,46 @@
+<ion-header>
+        <ion-navbar>
+            <button ion-button menuToggle>
+                <ion-icon name="list"></ion-icon>
+            </button>
+            <ion-title text-center>
+                {{title}}
+            </ion-title>
+        </ion-navbar>
+</ion-header>
+        
+<ion-content class="app-background">
+        <ion-card>
+                <ion-item>
+                    <ion-label floating>Shift Name</ion-label>
+                    <ion-input type="text" [(ngModel)]="ShiftName"></ion-input>
+                </ion-item>
+                <ion-item>
+                        <ion-label floating>Shift Time</ion-label>
+                        <ion-input type="text" [(ngModel)]="ShiftTime"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-col col-10 item-start>
+                        <ion-datetime (ionChange)="timeChange()" displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="timeStarts" placeholder="Start Time"></ion-datetime>
+                    </ion-col>
+                    <ion-col col-2 item-end>
+                        <ion-icon name="ios-arrow-down"></ion-icon>
+                    </ion-col>   
+                </ion-item>
+                <ion-item>
+                        <ion-col col-10 item-start>
+                            <ion-datetime  (ionChange)="timeChange()" displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="timeEnds" placeholder="End Time"></ion-datetime>
+                        </ion-col>
+                        <ion-col col-2 item-end>
+                            <ion-icon name="ios-arrow-down"></ion-icon>
+                        </ion-col>   
+                    </ion-item>
+                <ion-item>
+                    <ion-label floating>Description</ion-label>
+                    <ion-input type="text" [(ngModel)]="Description"></ion-input>
+                </ion-item>
+                <br>
+                <button ion-button class="btnSave" tappable (click)="SaveShift()">Save</button>
+                <button ion-button class="btnClear" tappable (click)="Reset()">Clear</button>
+        </ion-card>
+</ion-content>

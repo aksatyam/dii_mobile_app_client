@@ -1,0 +1,35 @@
+page-IndustryShift{
+    .heading{
+        background-color: color($colors,bluegreen);
+        color: white;
+        padding:10px;
+        text-align: center;
+        }    
+        .title{
+            color:color($colors,darkgray);
+        }
+        .contentdata{
+            color:color($colors,lightgray);
+        }
+        .fab-md, .fab-ios{
+            background-color:color($colors,orangecolor);
+        }
+        .card-header-md, .card-header-ios{
+            color:white;
+            background-color: color($colors,orangecolor);
+        }
+        .card-content-md, .card-content-ios{
+            padding-top:10px!important;
+        }
+        .datetime-md, .datetime-ios{
+            padding: 0px 0px 0px 0px;
+            color: color($colors, orangecolor);
+        }
+        .datetimeclass{
+            color: color($colors, bluegreen);
+            padding: 8px;
+        }
+        .datetime-disabled{
+            opacity: 1.0;
+        }
+}

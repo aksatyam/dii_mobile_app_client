@@ -1,0 +1,18 @@
+page-AdminProfile{
+    .info{
+        background: color($colors,groundcolor);
+        padding: 5%;
+        margin: 0px;
+        width: 100%
+      }
+      .info-heading{
+        color:color($colors,darkgray);
+        font-weight: 20px;
+      }
+      .info-sub-heading{
+        color:color($colors,lightgray);
+      }
+      .heading-font{
+        font-size: 18px;
+      }
+}

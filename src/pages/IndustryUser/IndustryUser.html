@@ -1,0 +1,62 @@
+<ion-header>
+        <ion-navbar>
+            <button ion-button menuToggle>
+                <ion-icon name="list"></ion-icon>
+            </button>
+            <ion-title text-center>
+                {{title}}
+            </ion-title>
+        </ion-navbar>
+        <div class="heading">
+               {{industyDeatils}}
+        </div>
+    </ion-header>
+        
+    <ion-content class="app-background">
+        <ion-refresher (ionRefresh)="doRefresh($event)">
+            <ion-refresher-content></ion-refresher-content>
+        </ion-refresher>
+        <ion-fab top right edge>
+            <button ion-fab mini tappable (click)="addInduUser()"><ion-icon name="add"></ion-icon></button>
+        </ion-fab>
+        <ion-card *ngFor="let user of IndustryUserData">
+            <ion-card-header>
+                {{user.user_name}}
+            </ion-card-header>
+            <ion-card-content>
+                <ion-row>
+                    <ion-col col-3>
+                        User Type 
+                    </ion-col>
+                    <ion-col col-9>
+                           : {{user.user_type_id}}
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-3>
+                            Email
+                    </ion-col>
+                    <ion-col col-9>
+                        : {{user.user_email}}
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-3>
+                                Conatct
+                    </ion-col>
+                    <ion-col col-9>
+                            : {{user.user_contact}}
+                    </ion-col>
+                </ion-row>
+                <hr>
+                <ion-row>
+                    <ion-col col-3>
+                        Entry Date
+                    </ion-col>
+                    <ion-col col-9>
+                            : {{user.createdAt | date}}
+                    </ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+    </ion-content>

@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="list"></ion-icon>
+        </button>
+        <ion-title text-center>
+            {{title}}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="app-background">
+        <div class="centre-align" >
+          <!-- <img  [src]="'data:image/jpg;base64,'+user[0].Picture" class="image-icon"> -->
+          <img src="assets/icon/LPULogo.png"  class="image-icon"><br>
+          <span>
+            <span class="user-name subheader-font-size">{{name}}</span>
+            <br>
+            <span class=" description-font user-degree">{{UID}}</span>
+            <br>
+            <span class=" description-font user-degree">{{email}}</span>
+          </span>
+        </div>
+            
+        <ion-card class="info">
+          <p class="info-heading desscription-font">Conatct No :</p>
+          <p class="info-sub-heading subheader-font-size">{{contact}}</p>
+          <p class="info-heading desscription-font">Created Date :</p>
+          <p class="info-sub-heading subheader-font-size">{{createdDate | date}}</p>
+        </ion-card>      
+</ion-content>

@@ -1,0 +1,68 @@
+
+<ion-content  style="text-align: center;position: relative" class="no-scroll">
+    
+        <div  class="bg-Signin" style="background-image: url('assets/Img/bgSignIn.png');">
+          <ion-list style="position: relative">
+            <ion-item class="transparent-bg" >
+              <ion-label floating style="color: white"><ion-icon name="ios-person-outline" style="font-size:5vw;"></ion-icon>&nbsp; Username</ion-label>
+              <ion-input type="text" style="color: white" [(ngModel)]="userId" ></ion-input>
+            </ion-item>
+    
+            <ion-item class="transparent-bg" no-padding no-margin>
+              <ion-label floating style="color: white" ><ion-icon name="ios-lock-outline" style="font-size:5vw;"></ion-icon>&nbsp; Password</ion-label>
+              <ion-input style="color: white" type="password" [(ngModel)]="password"></ion-input>
+            </ion-item>
+            <ion-label tappable (click)="forgetPassword()" class="forget" item-end>Forgot?</ion-label>
+          </ion-list>
+    
+          <button   ion-button block id="btn-submit" tappable (click)="submit()" >Sign In</button>
+        </div>
+        <img src="assets/icon/LPULogo.png" class="lpu-logo">
+    
+    
+      <ion-slides class="quotes-slide" autoplay="3000" loop="true" speed="1000">
+    
+        <ion-slide><ion-label class="quote subheader-font-size">	Try not to become a man of success but a man of value.	</ion-label><hr><ion-label class="description-font author">	Albert Einstein	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	If you have built castles in the air, your work need not be lost that is where they should be. Now put foundations under them.	</ion-label><hr><ion-label class="description-font author">	Henry David Thoreau 	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Nothing can stop the man with the right mental attitude from achieving his goal nothing on earth can help the man with the wrong mental attitude. 	</ion-label><hr><ion-label class="description-font author">	Thomas Jefferson	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	When one door of happiness closes, another opens, but often we look so long at the closed door that we do not see the one that has been opened for us.	</ion-label><hr><ion-label class="description-font author">	Helen Keller	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Talents are best nurtured in solitude, but character is best formed in the stormy billows of the world. 	</ion-label><hr><ion-label class="description-font author">	Johann Wolfgang von Goethe	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Characters do not change. Opinions alter, but characters are only developed.	</ion-label><hr><ion-label class="description-font author">	Benjamin Disraeli	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	There are two things to aim at in life first to get what you want, and after that to enjoy it. Only the wisest of mankind has achieved the second.	</ion-label><hr><ion-label class="description-font author">	Logan Pearsall Smith	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	The key to success is to focus our conscious mind on things we desire not things we fear.	</ion-label><hr><ion-label class="description-font author">	Brian Tracy	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	 Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.	</ion-label><hr><ion-label class="description-font author">	Mark Twain	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Many great ideas go unexecuted, and many great executioners are without ideas. One without the other is worthless.	</ion-label><hr><ion-label class="description-font author">	Tim Blixseth	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	I wrote on the door of heart, Please do not enter it Love came smiling and said: Sorry I am an illiterate.	</ion-label><hr><ion-label class="description-font author">	Michael Paul 	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	If friendship is your weakest point then you are the strongest person in the world	</ion-label><hr><ion-label class="description-font author">	Abraham Lincoln 	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Laughing Faces Do Not Mean That There Is Absence Of Sorrow But It Means That They Have The Ability To Deal With It	</ion-label><hr><ion-label class="description-font author">	Shakespeare	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Opportunities Are Like Sunrises ,If You Wait Too Long You Can Miss Them	</ion-label><hr><ion-label class="description-font author">	Willian Arthur 	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Never Play With The Feelings Of Others Because You May Win The Game But The Risk Is That You Will Surely Loose The Person For Life Time	</ion-label><hr><ion-label class="description-font author">	Shakespeare	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	When You Are In The Light, Everything Follows You, But When You Enter Into The Dark ,Even Your Own Shadow Doesnt Follow You.	</ion-label><hr><ion-label class="description-font author">	Hitler 	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Coin Always Makes Sound But The Currency Notes Are Always Silent.So When Your Value Increases Keep Yourself Calm Silent	</ion-label><hr><ion-label class="description-font author">	Shakespeare 	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	If We Are Not Part Of The Solutions, We Are The Big Problems	</ion-label><hr><ion-label class="description-font author">	Shiv Khera	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Winners Never Do The Different Things, They Do The Things Differently	</ion-label><hr><ion-label class="description-font author">	Shiv Khera	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	It Is Very Easy To Defeat Someone, But It Is Very Hard To Win Someone	</ion-label><hr><ion-label class="description-font author">	John Keats 	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Dont underestimate the power of small incremental changes. Dream big and constantly pull yourself in the right direction by checking off to-do after to-do one small task a day can rapidly eat away at something that looks and feels unreachable. 	</ion-label><hr><ion-label class="description-font author">	Shivam	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	If you can imagine it, you can achieve it if you can dream it, you can become it.	</ion-label><hr><ion-label class="description-font author">	William Arthur Ward	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Im not concerned with your liking or disliking me all I ask is that you respect me as a human being.	</ion-label><hr><ion-label class="description-font author">	Jackie Robinson	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Nothing is so fatiguing as the eternal hanging on of an uncompleted task.	</ion-label><hr><ion-label class="description-font author">	William James	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	There is one quality that one must possess to win, and that is definiteness of purpose, the knowledge of what one wants and the burning desire to achieve it.	</ion-label><hr><ion-label class="description-font author">	Napoleon Hill	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	How far you go in your life depends on your being tender with the young, compassionate with the aged, sympathetic with the striving, and tolerant of the weak and strong. Because someday in your life you will have been all of these.	</ion-label><hr><ion-label class="description-font author">	George Washington Carver	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Never underestimate the power of touch, a smile, a kind word, a listening ear, or an honest compliment.  We ALL have the potential to turn a day....or even a life around!	</ion-label><hr><ion-label class="description-font author">	Mother Teresa	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Sometimes our light goes out but is blown again into flame by an encounter with another human being.  Each of us owes the deepest thanks to those who have rekindled this inner light.	</ion-label><hr><ion-label class="description-font author">	Albert Schweitzer	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Look at everything as though you are seeing for the first time, with the eyes of a child, fresh with wonder.	</ion-label><hr><ion-label class="description-font author">	Joseph Cornell	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	The greatest power that a person possesses is the power to choose. BE SELFISH	</ion-label><hr><ion-label class="description-font author">	J. Martin Kohe	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Success is the progressive realization of a worthy ideal.	</ion-label><hr><ion-label class="description-font author">	Earl Nightingale	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	When your values are clear to you,making decisions becomes easier.	</ion-label><hr><ion-label class="description-font author">	Rod Disney	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	If we take care of the moments, the years will take care of themselves.	</ion-label><hr><ion-label class="description-font author">	Maria Edgeworth 	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Far away there in the sunshine are my highest aspirations. I may not reach them but I can look up and see their beauty, believe in them, and try to follow where they lead.	</ion-label><hr><ion-label class="description-font author">	Louisa May Alcott	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Appreciation is a wonderful thing: it makes what is excellent in others belong to us as well.	</ion-label><hr><ion-label class="description-font author">	Voltaire	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Let s start with what we can be thankful for, and get our mind into that vibration, and then watch the good that starts to come, because one thought leads to another thought.	</ion-label><hr><ion-label class="description-font author">	Bob Proctor	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Life takes on meaning when you become motivated, set goals and charge after them in an unstoppable manner.	</ion-label><hr><ion-label class="description-font author">	Les Brown	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Take the first step in faith.  You don t have to see the whole staircase, just take the first step.	</ion-label><hr><ion-label class="description-font author">	Dr. Martin Luther King, Jr.	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	90% of the game is half mental.	</ion-label><hr><ion-label class="description-font author">	Yogi Berra	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	Remember, no one can make you feel inferior without your consent.	</ion-label><hr><ion-label class="description-font author">	Eleanor Roosevelt 	</ion-label></ion-slide>
+        <ion-slide><ion-label class="quote subheader-font-size">	When patterns are broken new worlds emerge.	</ion-label><hr><ion-label class="description-font author">	TuliKupferburg	</ion-label></ion-slide>
+      </ion-slides>
+    </ion-content>
+    

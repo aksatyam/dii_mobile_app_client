@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="list"></ion-icon>
+        </button>
+        <ion-title text-center>
+            {{title}}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+    
+<ion-content class="app-background">
+        <ion-card>
+                <ion-item>
+                    <ion-label floating>Material Name</ion-label>
+                    <ion-input type="text" [(ngModel)]="MaterialName"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label floating>Description</ion-label>
+                    <ion-input type="text" [(ngModel)]="Description"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label floating>Inspection Parameter</ion-label>
+                    <ion-input type="text" [(ngModel)]="inspectionPara"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label floating>Quality Check Parameter</ion-label>
+                    <ion-input type="text" [(ngModel)]="qualityCheckPara"></ion-input>
+                </ion-item>
+                <br>
+                <button ion-button class="btnSave" tappable (click)="SaveMaterial()">Save</button>
+                <button ion-button class="btnClear" tappable (click)="Reset()">Clear</button>
+        </ion-card>
+</ion-content>

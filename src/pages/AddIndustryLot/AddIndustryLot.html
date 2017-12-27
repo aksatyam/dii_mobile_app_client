@@ -1,0 +1,32 @@
+<ion-header>
+        <ion-navbar>
+            <button ion-button menuToggle>
+                <ion-icon name="list"></ion-icon>
+            </button>
+            <ion-title text-center>
+                {{title}}
+            </ion-title>
+        </ion-navbar>
+</ion-header>
+        
+<ion-content class="app-background">
+    <ion-card>
+        <ion-item>
+            <ion-label floating>Lot Name</ion-label>
+            <ion-input type="text" [(ngModel)]="LotName"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Select Materials</ion-label>
+            <ion-select [(ngModel)]="materialsArray" multiple="true" col-12 placeholder="Select Materials" (ionChange)="getAllMaterialL()">
+                <ion-option *ngFor="let list of MaterialList" value="{{list._id}}">{{list.material_name}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+                <ion-label floating>Quantity</ion-label>
+                <ion-input type="number" [(ngModel)]="lotQuantity"></ion-input>
+        </ion-item>
+        <br>
+        <button ion-button class="btnSave" tappable (click)="SaveLots()">Save</button>
+        <button ion-button class="btnClear" tappable (click)="Reset()">Clear</button>
+    </ion-card>
+</ion-content>

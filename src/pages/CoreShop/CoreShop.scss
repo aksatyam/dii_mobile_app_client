@@ -1,0 +1,23 @@
+page-CoreShop{
+    .background{
+        background-color: color($colors,bluegreen);
+        padding: 5px;
+    }
+    .textItem{
+        color: white;
+        font-size: 16px;
+    }
+    .cols{
+        background-color: color($colors,orangecolor);
+        color:white;
+        text-align: center!important;
+    }
+    .content{
+        padding-top: 10px;
+    }
+    .colc{
+        text-align: center!important;
+        color: color($colors,darkgray);
+        border-bottom:1px solid color($colors,lightgray);
+    }
+}

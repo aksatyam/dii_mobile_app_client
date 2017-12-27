@@ -1,0 +1,319 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+$font-path: "../assets/fonts";
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+  darkgray:   #606060,
+  lightgray:  #909090,
+  orangecolor:#f5821f,
+  orangelight:#ebc5aa,
+  quizcolor:  #4a9cab,
+  bluegreen:  #026173,
+  lightbluegreen:#598895,
+  groundcolor:#F1F6F9,
+  white:#FFF,
+  pinkcolor:#E91E63,
+  bluecolor:#0000ff,
+  yellowcolor:#ffff00,
+  greencolor:#008000
+);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+$toolbar-ios-title-text-align:center;
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+
+@import "ionic.ionicons";
+
+.tabs-md {
+  a[aria-selected=false]{
+    .tab-button-icon[ng-reflect-name=customdash], .tab-button-icon[aria-label=customdash] {
+      content: url('../assets/Img/dashboard.png');
+      width: 32px;
+      height: 32px;
+      padding: 6px 4px 2px;
+      opacity: 0.9;
+    }
+    .tab-button-icon[ng-reflect-name=customhapp], .tab-button-icon[aria-label=customhapp] {
+      content: url('../assets/Img/happenings.png');
+      width: 32px;
+      height: 32px;
+      padding: 6px 4px 2px;
+      opacity: 0.9;
+    }
+    .tab-button-icon[ng-reflect-name=customrms], .tab-button-icon[aria-label=customrms] {
+      content: url('../assets/Img/rms.png');
+      width: 32px;
+      height: 32px;
+      padding: 6px 4px 2px;
+      opacity: 0.9;
+    }
+    .tab-button-icon[ng-reflect-name=customquiz], .tab-button-icon[aria-label=customquiz] {
+      content: url('../assets/Img/quick_quiz.png');
+      width: 32px;
+      height: 32px;
+      padding: 6px 4px 2px;
+      opacity: 0.9;
+    }
+    .tab-button-icon[ng-reflect-name=customprofile], .tab-button-icon[aria-label=customprofile] {
+      content: url('../assets/Img/avatar.png');
+      width: 32px;
+      height: 32px;
+      padding: 6px 4px 2px;
+      opacity: 0.9;
+    }
+    .tab-button-icon[ng-reflect-name=customphone], .tab-button-icon[aria-label=customprofile] {
+      content: url('../assets/Img/phone.png');
+      width: 32px;
+      height: 32px;
+      padding: 6px 4px 2px;
+      opacity: 0.9;
+    }
+  }
+
+  a[aria-selected=true] {
+    //führ eventuellen text
+    //span {
+    //color: #f00; //whatever colour you want to use for the text
+    //}
+    .tab-button-icon[ng-reflect-name=customdash], .tab-button-icon[aria-label=customdash] {
+      content: url('../assets/Img/dashboard_Orange.png');
+      width: 32px;
+      height: 32px;
+      padding: 6px 4px 2px;
+      opacity: 0.9;
+    }
+    .tab-button-icon[ng-reflect-name=customhapp], .tab-button-icon[aria-label=customhapp] {
+      content: url('../assets/Img/happenings_Orange.png');
+      width: 32px;
+      height: 32px;
+      padding: 6px 4px 2px;
+      opacity: 0.9;
+    }
+    .tab-button-icon[ng-reflect-name=customrms], .tab-button-icon[aria-label=customrms] {
+      content: url('../assets/Img/rms_Orange.png');
+      width: 32px;
+      height: 32px;
+      padding: 6px 4px 2px;
+      opacity: 0.9;
+    }
+    .tab-button-icon[ng-reflect-name=customquiz], .tab-button-icon[aria-label=customquiz] {
+      content: url('../assets/Img/quick_quiz_Orange.png');
+      width: 32px;
+      height: 32px;
+      padding: 6px 4px 2px;
+      opacity: 0.9;
+    }
+    .tab-button-icon[ng-reflect-name=customprofile], .tab-button-icon[aria-label=customprofile] {
+      content: url('../assets/Img/avatar_Orange.png');
+      width: 32px;
+      height: 32px;
+      padding: 6px 4px 2px;
+      opacity: 0.9;
+    }
+    .tab-button-icon[ng-reflect-name=customphone], .tab-button-icon[aria-label=customprofile] {
+      content: url('../assets/Img/phone_Orange.png');
+      width: 32px;
+      height: 32px;
+      padding: 6px 4px 2px;
+      opacity: 0.9;
+    }
+  }
+}
+
+.ion-md-customdash-outline,
+.ion-ios-customdash-outline{
+  content: url('../assets/Img/dashboard.png');
+  width: 32px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-customhapp-outline,
+.ion-md-customhapp-outline{
+  content: url('../assets/Img/happenings.png');
+  width: 32px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+.customrms,
+.ion-ios-customrms-outline,
+.ion-md-customrms-outline {
+
+
+    content: url('../assets/Img/rms.png');
+    width: 32px;
+    height: 32px;
+    padding: 6px 4px 2px;
+    opacity: 0.9;
+
+}
+.customquiz,
+.ion-ios-customquiz-outline,
+.ion-md-customquiz:before {
+  content: url('../assets/Img/quick_quiz.png');
+  width: 32px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+
+.ion-ios-customprofile-outline,
+.ion-md-customprofile:before {
+  content: url('../assets/Img/quick_quiz.png');
+  width: 32px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-customphone-outline,
+.ion-md-customphone:before {
+  content: url('../assets/Img/phone.png');
+  width: 32px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+//Selected Icons
+
+.ion-ios-customdash{
+  content: url('../assets/Img/dashboard_Orange.png');
+  width: 32px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-customhapp{
+  content: url('../assets/Img/happenings_Orange.png');
+  width: 32px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+.ion-ios-customrms{
+  content: url('../assets/Img/rms_Orange.png');
+  width: 32px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+.ion-ios-customquiz{
+  content: url('../assets/Img/quick_quiz_Orange.png');
+  width: 32px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+.ion-ios-customprofile {
+  content: url('../assets/Img/avatar_Orange.png');
+  width: 32px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-customphone {
+  content: url('../assets/Img/phone_Orange.png');
+  width: 32px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+$radio-md-color-on:color($colors,orangecolor);
+$radio-ios-color-on:color($colors,orangecolor);
+$radio-md-color-off:color($colors,lightgray);
+$radio-ios-color-off:color($colors,lightgray);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+$toolbar-ios-title-text-align:center;
+
+$tabs-ios-tab-text-color-active:color($colors,orangecolor);
+$tabs-md-tab-text-color-active:color($colors,orangecolor);
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+$tabs-ios-tab-icon-color-active:color($colors,orangecolor);
+$tabs-md-tab-icon-color-active:color($colors,orangecolor);
+
+
+$tabs-ios-tab-icon-color:gray;
+$tabs-md-tab-icon-color:gray;
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here

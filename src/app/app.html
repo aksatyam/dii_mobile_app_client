@@ -1,0 +1,36 @@
+
+  <ion-menu [content]="content">
+    
+        <ion-content style="height:100%"class="my-nav no-scroll" >
+          <div class="nav-profile-info" overflow-scroll="false" no-bounce has-bouncing="false"  style="position: fixed">
+            <img  tappable (click)="openUserProfile(profilePage)" menuClose  src="assets/icon/LPULogo.png"  class="image-icon">
+            <br>
+            <span>
+              <span *ngIf="user" class="user-name subheader-font-size">Admin</span>
+              <br>
+              <span class=" description-font user-degree">Administator</span>
+            </span>
+            <br>
+            <br>
+            <div class="btn" menuClose tappable (click)="openUserProfile(profilePage)">
+              User Profile
+            </div>
+            <br>
+          </div>
+          <ion-list class="menu-list">
+            <ion-item menuClose  class="navlist-item"  *ngFor="let p of pages" tappable (click)="openPage(p)">
+              <ion-label >
+                <span style="vertical-align: sub"><img [src]="'assets/menu'+p.ImageName" class="menu-icons"></span>
+                <span class="subheader-font-size  ">&nbsp; {{p.MenuText}}</span>
+              </ion-label>
+    
+            </ion-item>
+          </ion-list>
+          <div  menuClose class="logout-btn" tappable (click)="logOut()" overflow-scroll="false" no-bounce has-bouncing="false">
+              <ion-icon name="ios-log-out"></ion-icon> Logout
+          </div>
+        </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+    

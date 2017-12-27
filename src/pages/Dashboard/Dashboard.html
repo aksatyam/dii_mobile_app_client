@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="list"></ion-icon>
+        </button>
+        <ion-title text-center>
+            {{title}}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="app-background">
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <ion-fab top right edge>
+        <button ion-fab mini tappable (click)="addIndustryCategory()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+    <div class="container">
+        <div class="rows">
+            <div class="box" *ngFor="let cat of industryCategory" tappable (click)="selectedIndustryList(cat)">
+                <ion-card class="dashboard-tiles">
+                    <ion-card-header class="dashboard-tiles-header">
+                          </ion-card-header>
+                    <ion-card-content no-padding>
+                            <img src="assets/Img/attendance.png"  class="my-icons">
+                            <ion-label text-center class="dashboard-tiles-sub-heading">{{cat.indu_cat_name}}</ion-label>
+                    </ion-card-content>
+                </ion-card>
+            </div>
+        </div>
+    </div>
+</ion-content>
