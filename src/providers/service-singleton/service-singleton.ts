@@ -69,15 +69,12 @@ export class ServiceSingletonProvider {
     this.storage.set('USERINFO',User);
   }
   
-  setIndustryId(Indu_id){
-    this.storage.set('IndustryId',Indu_id);
-  }
-
   getUserInfo(){
-    var UserInfo=this.storage.get("USERINFO").then(data=>{
-      return data;
+    return new Promise(resolve=>{
+      this.storage.get('USERINFO').then(data=>{
+        resolve(data);
+      })
     })
-    return UserInfo;
   }
 
   postLogout(){
@@ -86,7 +83,6 @@ export class ServiceSingletonProvider {
       this.storage.set('USER_ID','');
       this.storage.set('USERINFO','');
       this.storage.set('DEVICE_ID','');
-      this.storage.set('IndustryId','');
       resolve(true);
     });
 

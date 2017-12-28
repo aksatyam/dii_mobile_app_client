@@ -43,7 +43,7 @@ export class SignInPage {
           this.webService.setUSER(this.UserData['data']);
           this.userId='';
           this.password='';
-          this.navCtrl.setRoot(IndustryInfoPage,{"UserDetails": this.UserData['data']});
+          this.navCtrl.setRoot(IndustryInfoPage);
         }
       });
     }

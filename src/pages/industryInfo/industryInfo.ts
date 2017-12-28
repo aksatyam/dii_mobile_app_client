@@ -32,30 +32,20 @@ export class IndustryInfoPage {
                 public webService:ServiceSingletonProvider, 
                 public navParms:NavParams,
                 public storage:Storage) {
-    if(this.navParms.get('UserDetails')){
-        this.IndustryInfo=this.navParms.get('UserDetails');
-        console.log(this.IndustryInfo);
-        this.IndustryId=this.IndustryInfo['indu_id'];
-        console.log(this.IndustryId);
-        this.webService.setIndustryId(this.IndustryId);
-      }
-
-      this.storage.get("IndustryId").then((val)=>{
-        console.log(val);
-        this.IndustryId=val;
+    
+      this.webService.getUserInfo().then(data=>{
+        console.log(data);
+        this.IndustryId=data['indu_id'];
         console.log(this.IndustryId);
         this.getIndustryInfo(this.IndustryId);
       });
-  }
 
-  getIndustryDet(){
-    
+     
   }
 
   getIndustryInfo(InduId){
     this.webService.presentLoading();
     this.webService.getOneIndustryInfo(InduId).then(data=>{
-      //this.webService.stopLoading();
       console.log(data);
       if(data['data']){
         this.IndustryDetails=data['data'];
@@ -73,47 +63,38 @@ export class IndustryInfoPage {
   }
 
   IndustryProfile(){
-    //this.webService.presentAlert('Warning!','this card show about industry profile Info');
     this.navCtrl.push(IndustryDetailsPage,{'IndustryInfo':this.IndustryDetails});
   }
 
   IndustryUserTypeInfo(){
-    //this.webService.presentAlert('Warning!','this card show about industry User Type Info');
     this.navCtrl.push(IndustryUserTypePage,{'IndustryInfo':this.IndustryDetails});
   }
 
   IndustryUserInfo(){
-    //this.webService.presentAlert('Warning!','this card show about industry User Info');
     this.navCtrl.push(IndustryUserPage,{'IndustryInfo':this.IndustryDetails});
   }
 
   IndustryEquipInfo(){
-    //this.webService.presentAlert('Warning!','this card show about industry Equipment Info');
     this.navCtrl.push(IndustryEquipmentPage,{'IndustryInfo':this.IndustryDetails});
   }
 
   IndustryMaterialInfo(){
-    //this.webService.presentAlert('Warning!','this card show about industry Material Info');
     this.navCtrl.push(IndustryMaterialPage,{'IndustryInfo':this.IndustryDetails});
   }
 
   IndustryStageEquipInfo(){
-    //this.webService.presentAlert('Warning!','this card show about industry Stage Equipment Info');
     this.navCtrl.push(IndustryStageEquipPage,{'IndustryInfo':this.IndustryDetails});
   }
 
   IndustryShiftInfo(){
-    //this.webService.presentAlert('Warning!','this card show about industry Shift Info');
     this.navCtrl.push(IndustryShiftPage,{'IndustryInfo':this.IndustryDetails});
   }
 
   IndustryLotsInfo(){
-    //this.webService.presentAlert('Warning!','this card show about industry Lots Info');
     this.navCtrl.push(IndustryLotsPage,{'IndustryInfo':this.IndustryDetails});
   }
 
   getCount(){
-    //this.webService.presentLoading();
     this.webService.getAllIndutsryType(this.IndustryId).then(data=>{
       this.UserTypeCount=data['data'].length;
       console.log(this.UserTypeCount);
