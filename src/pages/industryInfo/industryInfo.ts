@@ -39,12 +39,17 @@ export class IndustryInfoPage {
         console.log(this.IndustryId);
         this.webService.setIndustryId(this.IndustryId);
       }
+
       this.storage.get("IndustryId").then((val)=>{
         console.log(val);
         this.IndustryId=val;
         console.log(this.IndustryId);
         this.getIndustryInfo(this.IndustryId);
       });
+  }
+
+  getIndustryDet(){
+    
   }
 
   getIndustryInfo(InduId){

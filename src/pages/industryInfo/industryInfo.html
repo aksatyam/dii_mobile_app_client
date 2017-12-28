@@ -10,6 +10,9 @@
 </ion-header>
     
 <ion-content class="app-background">
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
     <ion-card tappable (click)="IndustryProfile()">
         <ion-item>
             <ion-label item-start class="title">INDUSTRY INFO</ion-label>

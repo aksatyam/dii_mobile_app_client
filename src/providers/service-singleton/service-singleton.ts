@@ -86,6 +86,7 @@ export class ServiceSingletonProvider {
       this.storage.set('USER_ID','');
       this.storage.set('USERINFO','');
       this.storage.set('DEVICE_ID','');
+      this.storage.set('IndustryId','');
       resolve(true);
     });
 
