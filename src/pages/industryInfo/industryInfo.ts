@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController,NavParams } from 'ionic-angular';
+import { NavController,NavParams,MenuController } from 'ionic-angular';
 import { ServiceSingletonProvider } from '../../providers/service-singleton/service-singleton';
 import { IndustryDetailsPage } from '../IndustryDetails/IndustryDetails';
 import { IndustryUserTypePage } from '../IndustryUserType/IndustryUserType';
@@ -31,8 +31,9 @@ export class IndustryInfoPage {
   constructor(  public navCtrl: NavController, 
                 public webService:ServiceSingletonProvider, 
                 public navParms:NavParams,
-                public storage:Storage) {
-    
+                public storage:Storage,
+                public menuCtrl:MenuController) {
+      this.menuCtrl.enable(true);
       this.webService.getUserInfo().then(data=>{
         console.log(data);
         this.IndustryId=data['indu_id'];
