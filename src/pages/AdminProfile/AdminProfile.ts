@@ -14,6 +14,7 @@ export class AdminProfilePage {
   public contact:any;
   public UID:any;
   public createdDate:any;
+  public Contact:any;
   constructor(public navCtrl: NavController,  public storage:Storage, public webServies:ServiceSingletonProvider,public navParms: NavParams) {
     this.storage.get('USERINFO').then((val)=>{
      console.log(val);

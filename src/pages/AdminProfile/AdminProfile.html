@@ -16,8 +16,8 @@
           <span>
             <span class="user-name subheader-font-size">{{name}}</span>
             <br>
-            <span class=" description-font user-degree">{{UID}}</span>
-            <br>
+            <span *ngIf="UID" class=" description-font user-degree">{{UID}}</span>
+            <br *ngIf="UID">
             <span class=" description-font user-degree">{{email}}</span>
           </span>
         </div>
