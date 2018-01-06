@@ -97,6 +97,7 @@ export class IndustryInfoPage {
   IndustryLotsInfo(){
     this.navCtrl.push(IndustryLotsPage,{'IndustryInfo':this.IndustryDetails});
   }
+  
   IndustryMaterialChkInfo(){
     this.navCtrl.push(IndustryMaterialChkPage,{'IndustryInfo':this.IndustryInfo});
   }
@@ -136,15 +137,15 @@ export class IndustryInfoPage {
       console.log(this.ShiftCount);
     });
 
-    this.webService.getIndustryAllLots(this.IndustryInfo._id).then(data=>{
+    this.webService.getIndustryAllLots(this.IndustryId).then(data=>{
       this.LotsCount=data['data'].length;
       console.log(this.LotsCount);
     });
 
-    this.webService.getAllMaterialChk(this.IndustryInfo._id).then(data=>{
+    this.webService.getAllMaterialChk(this.IndustryId).then(data=>{
       this.PrdouctCount=data['data'].length;
       console.log(this.PrdouctCount);
-      this.webService.stopLoading();
     })
+    this.webService.stopLoading();
   }
 }

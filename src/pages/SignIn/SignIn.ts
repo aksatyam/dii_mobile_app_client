@@ -35,12 +35,11 @@ export class SignInPage {
       this.webService.postIndustryLogin(myKeyVals).then(data=>{
         this.webService.stopLoading();
         console.log(data);
-        this.UserData=data;
-        if(this.UserData['data']){
-          this.webService.setTokenId(this.UserData['data']._id);
-          this.webService.setDeviceId(this.UserData['data'].user_deviceId);
-          this.webService.setUserId(this.UserData['data'].user_email);
-          this.webService.setUSER(this.UserData['data']);
+        if(data['data']){
+          this.webService.setTokenId(data['data']._id);
+          this.webService.setDeviceId(data['data'].user_deviceId);
+          this.webService.setUserId(data['data'].user_email);
+          this.webService.setUSER(data['data']);
           this.userId='';
           this.password='';
           this.navCtrl.setRoot(IndustryInfoPage);
