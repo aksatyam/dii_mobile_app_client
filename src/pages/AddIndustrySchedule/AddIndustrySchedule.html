@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="list"></ion-icon>
+        </button>
+        <ion-title text-center>
+            {{title}}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+    
+<ion-content class="app-background">
+    <ion-card>
+        <ion-item>
+            <ion-label>Select Product</ion-label>
+            <ion-select col-12 [(ngModel)]="Product" placeholder="Select Product" (ionChange)="ProductSelected()">
+                <ion-option *ngFor="let prod of AllProductData" value="{{prod.product_id._id}}">{{prod.product_id.material_name}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item *ngIf="Product">
+            <ion-label>Select Stages</ion-label>
+            <ion-select col-12 [(ngModel)]="stagesArray" multiple="true" placeholder="Select Stages" (ionChange)="StageSelected()">
+                <ion-option  *ngFor="let stage of AllStagesData" value="{{stage._id}}">{{stage.stage_name}}</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item *ngFor="let mat of tempArray;let i=index" style="margin-left:10px;">
+                <ion-label floating>{{mat.value.stage_name}} Per Unit Time</ion-label>
+                <ion-input type="tel" [(ngModel)]="array[mat.id]" maxlength="5"></ion-input>
+        </ion-item>
+        <ion-item>
+            <button ion-button class="btnSave"  (click)="SaveSchedule()">Save</button>
+            <button ion-button class="btnClear"  (click)="Reset()">Clear</button>
+        </ion-item>
+    </ion-card>
+</ion-content>

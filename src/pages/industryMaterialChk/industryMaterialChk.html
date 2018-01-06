@@ -1,0 +1,107 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="list"></ion-icon>
+        </button>
+        <ion-title text-center>
+            {{title}}
+        </ion-title>
+    </ion-navbar>
+    <div class="heading">
+        {{industyDeatils}}
+    </div>
+</ion-header>
+    
+<ion-content class="app-background">
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <ion-fab top right edge>
+        <button ion-fab mini tappable (click)="addInduProducts()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+    <ion-card *ngFor="let list of MaterialChkData">
+        <ion-card-header>
+            Product Name : {{list.product_id.material_name}}
+        </ion-card-header>
+        <ion-card-content>
+            <ion-label>
+                Material Used
+            </ion-label>
+            <p *ngIf="list.material0">
+                1. {{list.material0.material_name}}, Quantity: {{list.material0_qty}}
+            </p>
+            <p *ngIf="list.material1">
+                2. {{list.material1.material_name}}, Quantity: {{list.material1_qty}}
+            </p>
+            <p *ngIf="list.material2">
+                3. {{list.material0.material_name}}, Quantity: {{list.material0_qty}}
+            </p>
+            <p *ngIf="list.material3">
+                4. {{list.material3.material_name}}, Quantity: {{list.material3_qty}}
+            </p>
+            <p *ngIf="list.material4">
+                5. {{list.material4.material_name}}, Quantity: {{list.material4_qty}}
+            </p>
+            <p *ngIf="list.material5">
+                6. {{list.material5.material_name}}, Quantity: {{list.material5_qty}}
+            </p>
+            <p *ngIf="list.material6">
+                7. {{list.material6.material_name}}, Quantity: {{list.material6_qty}}
+            </p>
+            <p *ngIf="list.material7">
+                8. {{list.material7.material_name}}, Quantity: {{list.material7_qty}}
+            </p>
+            <p *ngIf="list.material8">
+                9. {{list.material8.material_name}}, Quantity: {{list.material8_qty}}
+            </p>
+            <p *ngIf="list.material9">
+                10. {{list.material9.material_name}}, Quantity: {{list.material9_qty}}
+            </p>
+            <p *ngIf="list.material10">
+                11. {{list.material10.material_name}}, Quantity: {{list.material10_qty}}
+            </p>
+            <p *ngIf="list.material11">
+                12. {{list.material11.material_name}}, Quantity: {{list.material11_qty}}
+            </p>
+            <p *ngIf="list.material12">
+                13. {{list.material12.material_name}}, Quantity: {{list.material12_qty}}
+            </p>
+            <p *ngIf="list.material13">
+                14. {{list.material13.material_name}}, Quantity: {{list.material13_qty}}
+            </p>
+            <p *ngIf="list.material14">
+                15. {{list.material14.material_name}}, Quantity: {{list.material14_qty}}
+            </p>
+            <p *ngIf="list.material15">
+                16. {{list.material15.material_name}}, Quantity: {{list.material15_qty}}
+            </p>
+            <p *ngIf="list.material16">
+                17. {{list.material16.material_name}}, Quantity: {{list.material16_qty}}
+            </p>
+            <p *ngIf="list.material17">
+                18. {{list.material17.material_name}}, Quantity: {{list.material17_qty}}
+            </p>
+            <p *ngIf="list.material18">
+                19. {{list.material18.material_name}}, Quantity: {{list.material18_qty}}
+            </p>
+            <p *ngIf="list.material19">
+                20. {{list.material19.material_name}}, Quantity: {{list.material19_qty}}
+            </p>
+            <p *ngIf="list.material20">
+                21. {{list.material20.material_name}}, Quantity: {{list.material20_qty}}
+            </p>
+            <p *ngIf="list.material21">
+                22. {{list.material21.material_name}}, Quantity: {{list.material21_qty}}
+            </p>
+            <p *ngIf="list.material22">
+                23. {{list.material22.material_name}}, Quantity: {{list.material22_qty}}
+            </p>
+            <p *ngIf="list.material23">
+                24. {{list.material23.material_name}}, Quantity: {{list.material23_qty}}
+            </p>
+            <p *ngIf="list.material24">
+                25. {{list.material24.material_name}}, Quantity: {{list.material24_qty}}
+           </p>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
