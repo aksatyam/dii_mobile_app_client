@@ -9,9 +9,10 @@ import { IndustryMaterialPage } from '../IndustryMaterial/IndustryMaterial';
 import { IndustryStageEquipPage } from '../IndustryStageEquip/IndustryStageEquip';
 import { IndustryShiftPage } from '../IndustryShift/IndustryShift';
 import { IndustryLotsPage } from '../IndustryLots/IndustryLots';
-import {Storage} from "@ionic/storage";
 import { IndustryMaterialChkPage } from '../industryMaterialChk/industryMaterialChk';
 import { IndustrySchedulePage } from '../industrySchedule/industrySchedule';
+import {Storage} from "@ionic/storage";
+
 
 @Component({
   selector: 'page-industryInfo',
@@ -99,11 +100,11 @@ export class IndustryInfoPage {
   }
   
   IndustryMaterialChkInfo(){
-    this.navCtrl.push(IndustryMaterialChkPage,{'IndustryInfo':this.IndustryInfo});
+    this.navCtrl.push(IndustryMaterialChkPage,{'IndustryInfo':this.IndustryDetails});
   }
 
   IndustryScheduleInfo(){
-    this.navCtrl.push(IndustrySchedulePage,{'IndustryInfo':this.IndustryInfo});
+    this.navCtrl.push(IndustrySchedulePage,{'IndustryInfo':this.IndustryDetails});
   }
 
   getCount(){
@@ -145,7 +146,8 @@ export class IndustryInfoPage {
     this.webService.getAllMaterialChk(this.IndustryId).then(data=>{
       this.PrdouctCount=data['data'].length;
       console.log(this.PrdouctCount);
+      this.webService.stopLoading();
     })
-    this.webService.stopLoading();
+   
   }
 }
