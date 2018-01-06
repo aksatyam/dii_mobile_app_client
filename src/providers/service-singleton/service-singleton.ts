@@ -349,4 +349,31 @@ export class ServiceSingletonProvider {
     return this.postData(u, myKeyVals);
   }
   
+  //get getAllMaterialChk
+  getAllMaterialChk(ID){
+    var u=this.BASE_URL+"materialChk"+"/"+"getAllProduct"+"/"+ID;
+    console.log(u);
+    return this.getData(u);
+  }
+
+  //post Products info of one company
+  postIndustryOneProducts(myKeyVals){
+    var u=this.BASE_URL+"materialChk"+"/"+"save";
+    console.log(u);
+    console.log(myKeyVals);
+    return this.postData(u, myKeyVals);
+  }
+
+  getAllSchedule(ID){
+    var u=this.BASE_URL+"schedule"+"/"+"getAllSchedule"+"/"+ID;
+    console.log(u);
+    return this.getData(u);
+  }
+
+  postIndustryOneSchedule(myKeyVals){
+    var u=this.BASE_URL+"schedule"+"/"+"save";
+    console.log(u);
+    console.log(myKeyVals);
+    return this.postData(u, myKeyVals);
+  }
 }
