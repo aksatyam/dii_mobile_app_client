@@ -10,6 +10,8 @@ import { IndustryStageEquipPage } from '../IndustryStageEquip/IndustryStageEquip
 import { IndustryShiftPage } from '../IndustryShift/IndustryShift';
 import { IndustryLotsPage } from '../IndustryLots/IndustryLots';
 import {Storage} from "@ionic/storage";
+import { IndustryMaterialChkPage } from '../industryMaterialChk/industryMaterialChk';
+import { IndustrySchedulePage } from '../industrySchedule/industrySchedule';
 
 @Component({
   selector: 'page-industryInfo',
@@ -25,6 +27,7 @@ export class IndustryInfoPage {
   public StageEquipCount:any;
   public ShiftCount:any;
   public LotsCount:any;  
+  public PrdouctCount:any;
   public Status:boolean=false;
   public IndustryDetails:any;
   public IndustryId:any;
@@ -94,6 +97,13 @@ export class IndustryInfoPage {
   IndustryLotsInfo(){
     this.navCtrl.push(IndustryLotsPage,{'IndustryInfo':this.IndustryDetails});
   }
+  IndustryMaterialChkInfo(){
+    this.navCtrl.push(IndustryMaterialChkPage,{'IndustryInfo':this.IndustryInfo});
+  }
+
+  IndustryScheduleInfo(){
+    this.navCtrl.push(IndustrySchedulePage,{'IndustryInfo':this.IndustryInfo});
+  }
 
   getCount(){
     this.webService.getAllIndutsryType(this.IndustryId).then(data=>{
@@ -126,10 +136,15 @@ export class IndustryInfoPage {
       console.log(this.ShiftCount);
     });
 
-    this.webService.getIndustryAllLots(this.IndustryId).then(data=>{
+    this.webService.getIndustryAllLots(this.IndustryInfo._id).then(data=>{
       this.LotsCount=data['data'].length;
       console.log(this.LotsCount);
-      this.webService.stopLoading();
     });
+
+    this.webService.getAllMaterialChk(this.IndustryInfo._id).then(data=>{
+      this.PrdouctCount=data['data'].length;
+      console.log(this.PrdouctCount);
+      this.webService.stopLoading();
+    })
   }
 }
