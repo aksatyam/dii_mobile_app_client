@@ -1,9 +1,9 @@
 page-IndustryDetails{
     .heading{
-    background-color: color($colors,bluegreen);
-    color: white;
-    padding:10px;
-    text-align: center;
+        background-color: color($colors,bluegreen);
+        color: white;
+        padding:10px;
+        text-align: center;
     }
     .CardPadding{
         padding: 8px;
@@ -14,4 +14,21 @@ page-IndustryDetails{
     .contentdata{
         color:color($colors,lightgray);
     }
+
+    .info{
+        background: color($colors,groundcolor);
+        padding: 5%;
+        margin: 0px;
+        width: 100%
+      }
+      .info-heading{
+        color:color($colors,darkgray);
+        font-weight: 20px;
+      }
+      .info-sub-heading{
+        color:color($colors,lightgray);
+      }
+      .heading-font{
+        font-size: 18px;
+      }
 }

@@ -24,81 +24,9 @@
             Product Name : {{sched.product_id.material_name}}
         </ion-card-header>
         <ion-card-content>
-            <p *ngIf="sched.stage0">
-                1. {{sched.stage0.stage_name}}, Per Unit Time: {{sched.stage0_perUnitTime}}
+            <p *ngFor="let li of sched.stages;let i=index;">
+                {{i+1}}. {{li.stage_id.stage_name}}, Per Unit Time: {{li.perUnitTime}}
             </p>
-            <p *ngIf="sched.stage1">
-                2. {{sched.stage1.stage_name}}, Per Unit Time: {{sched.stage1_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage2">
-                3. {{sched.stage0.stage_name}}, Per Unit Time: {{sched.stage0_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage3">
-                4. {{sched.stage3.stage_name}}, Per Unit Time: {{sched.stage3_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage4">
-                5. {{sched.stage4.stage_name}}, Per Unit Time: {{sched.stage4_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage5">
-                6. {{sched.stage5.stage_name}}, Per Unit Time: {{sched.stage5_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage6">
-                7. {{sched.stage6.stage_name}}, Per Unit Time: {{sched.stage6_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage7">
-                8. {{sched.stage7.stage_name}}, Per Unit Time: {{sched.stage7_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage8">
-                9. {{sched.stage8.stage_name}}, Per Unit Time: {{sched.stage8_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage9">
-                10. {{sched.stage9.stage_name}}, Per Unit Time: {{sched.stage9_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage10">
-                11. {{sched.stage10.stage_name}}, Per Unit Time: {{sched.stage10_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage11">
-                12. {{sched.stage11.stage_name}}, Per Unit Time: {{sched.stage11_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage12">
-                13. {{sched.stage12.stage_name}}, Per Unit Time: {{sched.stage12_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage13">
-                14. {{sched.stage13.stage_name}}, Per Unit Time: {{sched.stage13_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage14">
-                15. {{sched.stage14.stage_name}}, Per Unit Time: {{sched.stage14_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage15">
-                16. {{sched.stage15.stage_name}}, Per Unit Time: {{sched.stage15_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage16">
-                17. {{sched.stage16.stage_name}}, Per Unit Time: {{sched.stage16_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage17">
-                18. {{sched.stage17.stage_name}}, Per Unit Time: {{sched.stage17_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage18">
-                19. {{sched.stage18.stage_name}}, Per Unit Time: {{sched.stage18_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage19">
-                20. {{sched.stage19.stage_name}}, Per Unit Time: {{sched.stage19_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage20">
-                21. {{sched.stage20.stage_name}}, Per Unit Time: {{sched.stage20_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage21">
-                22. {{sched.stage21.stage_name}}, Per Unit Time: {{sched.stage21_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage22">
-                23. {{sched.stage22.stage_name}}, Per Unit Time: {{sched.stage22_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage23">
-                24. {{sched.stage23.stage_name}}, Per Unit Time: {{sched.stage23_perUnitTime}}
-            </p>
-            <p *ngIf="sched.stage24">
-                25. {{sched.stage24.stage_name}}, Per Unit Time: {{sched.stage24_perUnitTime}}
-           </p>
         </ion-card-content>
     </ion-card>
 </ion-content>

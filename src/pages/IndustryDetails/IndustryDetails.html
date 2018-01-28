@@ -13,86 +13,35 @@
     </ion-header>
         
     <ion-content class="app-background">
-        <ion-card class="CardPadding">
-            <ion-row>
-                <ion-col col-4 class="title">
-                    Industry Title
-                </ion-col>
-                <ion-col col-8 class="contentdata">
-                    : {{IndustryData.indu_name}}
-                </ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col col-4 class="title">
-                    Owner Name 
-                </ion-col>
-                <ion-col col-8 class="contentdata">
-                    : {{IndustryData.indu_owner}}
-                </ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col col-4 class="title">
-                    Description
-                </ion-col>
-                <ion-col col-8 class="contentdata">
-                    : {{IndustryData.indu_description}}
-                </ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col col-4 class="title">
-                    Email
-                </ion-col>
-                <ion-col col-8 class="contentdata">
-                    : {{IndustryData.indu_email}}
-                </ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col col-4 class="title">
-                    Contact 
-                </ion-col>
-                <ion-col col-8 class="contentdata">
-                    : {{IndustryData.indu_contact}}
-                </ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col col-4 class="title">
-                    Address
-                </ion-col>
-                <ion-col col-8 class="contentdata">
-                    : {{IndustryData.indu_address}}
-                </ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col col-4 class="title">
-                    City
-                </ion-col>
-                <ion-col col-8 class="contentdata">
-                    : {{IndustryData.indu_city}}
-                </ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col col-4 class="title">
-                    State
-                </ion-col>
-                <ion-col col-8 class="contentdata">
-                    : {{IndustryData.indu_state}}
-                </ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col col-4 class="title">
-                    Pin
-                </ion-col>
-                <ion-col col-8 class="contentdata">
-                    : {{IndustryData.indu_pin}}
-                </ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col col-4 class="title">
-                    Country
-                </ion-col>
-                <ion-col col-8 class="contentdata">
-                    : {{IndustryData.indu_country}}
-                </ion-col>
-            </ion-row>
+        <div class="centre-align" >
+            <img src="assets/icon/LPULogo.png"  class="image-icon"><br>
+            <span>
+                <span class="user-name subheader-font-size">{{IndustryData.indu_name}}</span><br>
+                <span class="user-name subheader-font-size">{{IndustryData.indu_category.indu_cat_name}} ( {{IndustryData.indu_sub_category.indu_cat_list_name}} )</span>
+                <br>
+                <span class=" description-font user-degree">{{IndustryData.indu_owner}}</span>
+            </span>
+        </div>
+        <ion-card class="info">
+            <p class="info-heading desscription-font">Email:</p>
+            <p class="info-sub-heading subheader-font-size">{{IndustryData.indu_email}} 
+                <!-- <ion-icon name="md-create"  style="float:right; margin-right:5px;" tappable (click)="updateEmail(IndustryData)"></ion-icon> -->
+            </p>
+            <p class="info-heading desscription-font">Contact No:</p>
+            <p class="info-sub-heading subheader-font-size">{{IndustryData.indu_contact}} 
+                <!-- <ion-icon name="md-create" style="float:right; margin-right:5px;"  tappable (click)="updateContact(IndustryData)"></ion-icon> -->
+            </p>
+            <p class="info-heading desscription-font">Address:</p>
+            <p class="info-sub-heading subheader-font-size">{{IndustryData.indu_address}}</p>
+            <p class="info-heading desscription-font">City:</p>
+            <p class="info-sub-heading subheader-font-size">{{IndustryData.indu_city}}</p>
+            <p class="info-heading desscription-font">Pin:</p>
+            <p class="info-sub-heading subheader-font-size">{{IndustryData.indu_pin}}</p>
+            <p class="info-heading desscription-font">State:</p>
+            <p class="info-sub-heading subheader-font-size">{{IndustryData.indu_state}}</p>
+            <p class="info-heading desscription-font">Country:</p>
+            <p class="info-sub-heading subheader-font-size">{{IndustryData.indu_country}}</p>
+            <p class="info-heading desscription-font">About Industry:</p>
+            <p class="info-sub-heading subheader-font-size">{{IndustryData.indu_description}}</p>
         </ion-card>
     </ion-content>
