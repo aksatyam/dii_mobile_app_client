@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="list"></ion-icon>
+        </button>
+        <ion-title text-center>
+            {{title}}
+        </ion-title>
+    </ion-navbar>
+    <div class="heading">
+        {{industyDeatils}}
+    </div>
+</ion-header>
+    
+<ion-content class="app-background">
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <ion-fab top right edge>
+        <button ion-fab mini tappable (click)="addInduMaterialAvailable()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+    <ion-card *ngFor="let avail of MaterialAvailableData">
+        <ion-card-header>
+                Material : {{avail.material_master_id.material_name}}
+        </ion-card-header>
+        <ion-item>
+            <!-- <p>Available Quantity : {{avail.available_quantity}}</p> -->
+            <p>Updated Quantity : {{avail.updated_quantity}}</p>
+        </ion-item>
+        <!-- <hr>
+        <ion-item>
+            <ion-icon item-end name="md-create" class="editPen" tappable (click)="UpdateMaterilaChk(avail)"></ion-icon>
+        </ion-item> -->
+    </ion-card>
+</ion-content>

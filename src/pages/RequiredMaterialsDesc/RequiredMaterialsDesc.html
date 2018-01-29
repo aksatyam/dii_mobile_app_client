@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+            <button ion-button menuToggle>
+                <ion-icon name="list"></ion-icon>
+            </button>
+            <ion-title text-center>
+                {{title}}
+            </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="app-background">
+    <ion-card *ngIf="materialsUsed?.length>0">
+        <ion-card-header>
+            Product Name: {{ProductInfo.product_id.material_name}}
+            <br>
+            Quantity : {{ProductInfo.quantity}}
+        </ion-card-header>
+        <ion-row>
+            <ion-col>Materials</ion-col>
+            <ion-col>Quantity/Unit</ion-col>
+            <ion-col>Total Required</ion-col>
+        </ion-row>
+        <ion-row *ngFor="let mat of materialsUsed">
+            <ion-col>{{mat.material_id.material_name}}</ion-col>
+            <ion-col>{{mat.quantity}}</ion-col>
+            <ion-col>{{mat.quantity * ProductInfo.quantity}}</ion-col>
+        </ion-row>
+    </ion-card>
+
+</ion-content>
