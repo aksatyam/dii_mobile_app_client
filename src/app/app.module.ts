@@ -38,6 +38,11 @@ import { IndustryMaterialChkPage } from '../pages/industryMaterialChk/industryMa
 import { AddIndustryMaterialChkPage } from '../pages/AddindustryMaterialChk/AddindustryMaterialChk';
 import { IndustrySchedulePage } from '../pages/industrySchedule/industrySchedule';
 import { AddIndustrySchedulePage } from '../pages/AddIndustrySchedule/AddIndustrySchedule';
+import { IndustryMaterialAvailablePage } from '../pages/IndustryMaterialAvailable/IndustryMaterialAvailable';
+import { IndustryScheduleTransactionPage } from '../pages/IndustryScheduleTransaction/IndustryScheduleTransaction'; 
+import { AddIndustryMaterialAvailablePage } from '../pages/AddIndustryMaterialAvailable/AddIndustryMaterialAvailable';
+import { AddIndustryScheduleTransactionPage } from '../pages/AddIndustryScheduleTransaction/AddIndustryScheduleTransaction';
+import { RequiredMaterialsDescPage } from '../pages/RequiredMaterialsDesc/RequiredMaterialsDesc';
 
 @NgModule({
   declarations: [
@@ -71,7 +76,12 @@ import { AddIndustrySchedulePage } from '../pages/AddIndustrySchedule/AddIndustr
     IndustryMaterialChkPage,
     AddIndustryMaterialChkPage,
     IndustrySchedulePage,
-    AddIndustrySchedulePage
+    AddIndustrySchedulePage,
+    IndustryMaterialAvailablePage,
+    IndustryScheduleTransactionPage,
+    AddIndustryMaterialAvailablePage,
+    AddIndustryScheduleTransactionPage,
+    RequiredMaterialsDescPage
   ],
   imports: [
     BrowserModule,
@@ -111,7 +121,12 @@ import { AddIndustrySchedulePage } from '../pages/AddIndustrySchedule/AddIndustr
     IndustryMaterialChkPage,
     AddIndustryMaterialChkPage,
     IndustrySchedulePage,
-    AddIndustrySchedulePage
+    AddIndustrySchedulePage,
+    IndustryMaterialAvailablePage,
+    IndustryScheduleTransactionPage,
+    AddIndustryMaterialAvailablePage,
+    AddIndustryScheduleTransactionPage,
+    RequiredMaterialsDescPage
   ],
   providers: [
     StatusBar,

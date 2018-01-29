@@ -12,7 +12,8 @@ import { IndustryLotsPage } from '../IndustryLots/IndustryLots';
 import { IndustryMaterialChkPage } from '../industryMaterialChk/industryMaterialChk';
 import { IndustrySchedulePage } from '../industrySchedule/industrySchedule';
 import {Storage} from "@ionic/storage";
-
+import { IndustryMaterialAvailablePage } from '../IndustryMaterialAvailable/IndustryMaterialAvailable';
+import { IndustryScheduleTransactionPage } from '../IndustryScheduleTransaction/IndustryScheduleTransaction';
 
 @Component({
   selector: 'page-industryInfo',
@@ -105,6 +106,14 @@ export class IndustryInfoPage {
 
   IndustryScheduleInfo(){
     this.navCtrl.push(IndustrySchedulePage,{'IndustryInfo':this.IndustryDetails});
+  }
+
+  IndustryRawMaterialAvailableInfo(){
+    this.navCtrl.push(IndustryMaterialAvailablePage,{'IndustryInfo':this.IndustryDetails});
+  }
+
+  IndustryScheduleTransInfo(){
+    this.navCtrl.push(IndustryScheduleTransactionPage,{'IndustryInfo':this.IndustryDetails});
   }
 
   getCount(){

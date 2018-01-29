@@ -364,16 +364,63 @@ export class ServiceSingletonProvider {
     return this.postData(u, myKeyVals);
   }
 
+  //get getOneMaterialChk Info
+  getOneMaterialChkInfo(ID){
+    var u=this.BASE_URL+"materialChk"+"/"+"getOneProductInfo"+"/"+ID;
+    console.log(u);
+    return this.getData(u);
+  }
+
+  //get All Scheduled Products
   getAllSchedule(ID){
     var u=this.BASE_URL+"schedule"+"/"+"getAllSchedule"+"/"+ID;
     console.log(u);
     return this.getData(u);
   }
 
+  //post oneSchedule product
   postIndustryOneSchedule(myKeyVals){
     var u=this.BASE_URL+"schedule"+"/"+"save";
     console.log(u);
     console.log(myKeyVals);
     return this.postData(u, myKeyVals);
+  }
+
+  //getAll Material Available Master
+  getAllMaterialAvailableMaster(ID){
+    var u=this.BASE_URL+"materialAvailable"+"/"+"getAll"+"/"+ID;
+    console.log(u);
+    return this.getData(u);
+  }
+  
+  //postSave Material Available Master 
+  postOneMateriAvailableMater(myKeyVals){
+    var u=this.BASE_URL+"materialAvailable"+"/"+"save";
+    console.log(u);
+    console.log(myKeyVals);
+    return this.postData(u,myKeyVals);
+  }
+
+  //postEdit Material Available master
+  postUpdateOneMateriAvailableMater(myKeyVals){
+    var u=this.BASE_URL+"materialAvailable"+"/"+"editOne";
+    console.log(u);
+    console.log(myKeyVals);
+    return this.postData(u,myKeyVals);
+  }
+
+  //get All Schedule Transcation Master data
+  getAllScheduleTransaction(ID){
+    var u=this.BASE_URL+"scheduleTransaction"+"/"+"getAll"+"/"+ID;
+    console.log(u);
+    return this.getData(u);
+  }
+
+  //post Schedule Transaction data to save
+  postOneScheduleTransaction(myKeyVals){
+    var u=this.BASE_URL+"scheduleTransaction"+"/"+"save";
+    console.log(u);
+    console.log(myKeyVals);
+    return this.postData(u,myKeyVals);
   }
 }
