@@ -56,7 +56,12 @@ export class AddIndustrySchedulePage{
         console.log(this.tempArray);
     }
 
+    timeChange(val){
+        console.log(val);
+    }
+
     SaveSchedule(){
+        console.log(this.array);
         if(this.Product==undefined ||this.Product==''){
             this.webService.presentAlert('Alert!','Select Product name.');
         }
@@ -64,6 +69,7 @@ export class AddIndustrySchedulePage{
             this.webService.presentAlert('Alert','Select atleast One Stage');
         }
         else if(this.tempArray){
+            console.log(this.array)
             for(let v=0;v<this.tempArray.length;v++){
                 if(this.array[v]==undefined || !this.array[v]){
                     return this.webService.presentAlert('Alert!','Enter '+this.tempArray[v].value['stage_name']+' quantity');
@@ -74,14 +80,20 @@ export class AddIndustrySchedulePage{
     }
 
     saveCallWebService(){
+        let satgeArr=[];
         let myKeyVals={ indu_id:this.IndustryId, product_id:this.Product};
-        for(let j=0;j<25;j++){
-            if(this.tempArray[j]){
-                myKeyVals["stage"+j]=this.tempArray[j].value['_id'];
-                myKeyVals["stage"+j+"_perUnitTime"]=this.array[j];  
-            }          
+        if(this.tempArray.length<25 && this.tempArray.length>0){
+            let i =0;
+            for(let item of this.tempArray){
+                let obj = {
+                    stage_id : item.value['_id'],
+                    perUnitTime:  Number(this.array[i])
+                }
+                satgeArr.push(obj);
+                i++;
+            }
         }
-        console.log(myKeyVals);
+        myKeyVals['stages'] = satgeArr;
         this.webService.presentLoading();
         this.webService.postIndustryOneSchedule(myKeyVals).then(data=>{
             this.webService.stopLoading();

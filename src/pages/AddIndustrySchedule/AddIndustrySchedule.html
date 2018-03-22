@@ -25,8 +25,8 @@
         </ion-item>
 
         <ion-item *ngFor="let mat of tempArray;let i=index" style="margin-left:10px;">
-                <ion-label floating>{{mat.value.stage_name}} Per Unit Time</ion-label>
-                <ion-input type="tel" [(ngModel)]="array[mat.id]" maxlength="5"></ion-input>
+            <ion-label>{{mat.value.stage_name}} Per Unit Time (MM:SS)</ion-label>
+            <ion-datetime displayFormat="mm:ss" pickerFormat="mm ss" [(ngModel)]="array[mat.id]"></ion-datetime>
         </ion-item>
         <ion-item>
             <button ion-button class="btnSave"  (click)="SaveSchedule()">Save</button>
