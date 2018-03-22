@@ -33,18 +33,14 @@
             <ion-col col-6>
                 : {{list.material_description}}
             </ion-col>
-            <ion-col col-6>
-                Inspection Parem
-            </ion-col>
-            <ion-col col-6>
-                : {{list.inspection_parem}}
-            </ion-col>
-            <ion-col col-6>
-                Quality Check Parem
-            </ion-col>
-            <ion-col col-6>
-                : {{list.qulaitycheck_parem}}
-            </ion-col>
         </ion-row>
+        <ion-card-content *ngIf="list.parameters?.length>0">
+                <ion-label>
+                    Parameters
+                </ion-label>
+                <p *ngFor="let li of list.parameters;let i=index;">
+                        {{i+1}}. {{li.parem_name}}, Quantity/Unit: {{li.parem_qty}}
+                </p>
+        </ion-card-content>
     </ion-card>
 </ion-content>

@@ -1,5 +1,5 @@
 page-IndustryMaterial{
-        .heading{
+    .heading{
         background-color: color($colors,bluegreen);
         color: white;
         padding:10px;
@@ -20,5 +20,8 @@ page-IndustryMaterial{
         }
         .card-content-md, .card-content-ios{
             padding-top:10px!important;
+        }
+        .card-md,.card-ios{
+            padding:10px 5px 5px 5px;
         }
 }
