@@ -20,13 +20,23 @@
                     <ion-input type="text" [(ngModel)]="Description"></ion-input>
                 </ion-item>
                 <ion-item>
-                    <ion-label floating>Inspection Parameter</ion-label>
-                    <ion-input type="text" [(ngModel)]="inspectionPara"></ion-input>
+                    <ion-label item-satrt>Material Paremeters</ion-label>
+                    <ion-badge item-end>{{ParemCount}}</ion-badge>
                 </ion-item>
                 <ion-item>
-                    <ion-label floating>Quality Check Parameter</ion-label>
-                    <ion-input type="text" [(ngModel)]="qualityCheckPara"></ion-input>
+                    <ion-range min="minParem" max="maxParem" [(ngModel)]="ParemCount" class="rangeColor" (ionChange)="onInputChange()">
+                      <ion-label range-left>{{minParem}}</ion-label>
+                      <ion-label range-right>{{maxParem}}</ion-label>
+                    </ion-range>
                 </ion-item>
+                <ion-row *ngFor="let mat of tempparemeterName">
+                    <ion-col>
+                            <ion-input type="text" [(ngModel)]="paremeterName[mat.id]" placeholder="Parameter Name"></ion-input>
+                    </ion-col>
+                    <ion-col>
+                            <ion-input type="tel" maxlength="6" [(ngModel)]="paremeterQuantity[mat.id]" placeholder="Parameter Quantity/Unit"></ion-input>
+                    </ion-col>
+                </ion-row>
                 <br>
                 <button ion-button class="btnSave" tappable (click)="SaveMaterial()">Save</button>
                 <button ion-button class="btnClear" tappable (click)="Reset()">Clear</button>
