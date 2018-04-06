@@ -64,15 +64,9 @@ app-container {
       text-align: center;
       background: color($colors, bluegreen);
     }
-    .image-icon {
-  
-      height: 80px;
-      width: 80px;
-      border-radius: 40px;
-    }
     .btn {
-      background: white;
-      color: color($colors, bluegreen);
+      background: color($colors, bluegreen);
+      color: white;
       font-size: smaller;
       padding: 2px 2px 2px 2px;
       text-decoration: none;
@@ -258,13 +252,13 @@ app-container {
       background: color($colors, bluegreen);
     }
     .nav-profile-info {
-  
+      border-bottom: 1px solid darkgray;
       width: 100%;
       height: 240px;
       padding: 20px;
       margin-left: 0;
       text-align: center;
-      background: color($colors, bluegreen);
+      //background: color($colors, bluegreen);
     }
     .menu-list {
       margin-top: 240px;
@@ -279,10 +273,9 @@ app-container {
       bottom: 0;
     }
     .image-icon {
-  
       height: 80px;
       width: 80px;
-      border-radius: 40px;
+      
     }
     .btn {
       background: white;
@@ -297,6 +290,12 @@ app-container {
     }
     .user-degree {
       color: white;
+      padding: 5px;
+      background-color: color($colors, bluegreen);
+    }
+    .user-degree1{
+      color: color($colors, bluegreen);
+      padding: 5px;
     }
   
     .logout-btn {

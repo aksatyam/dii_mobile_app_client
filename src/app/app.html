@@ -3,17 +3,17 @@
     
         <ion-content style="height:100%"class="my-nav no-scroll" >
           <div class="nav-profile-info" overflow-scroll="false" no-bounce has-bouncing="false"  style="position: fixed">
-            <img  tappable (click)="openUserProfile(profilePage)" menuClose  src="assets/icon/LPULogo.png"  class="image-icon">
+            <img  tappable (click)="openUserProfile(profilePage)" menuClose  src="assets/icon/logo.png"  class="image-icon">
             <br>
             <span>
               <span *ngIf="user" class="user-name subheader-font-size">Admin</span>
               <br>
-              <span class=" description-font user-degree">Administator</span>
+              <span class="user-degree1">Administator</span>
             </span>
             <br>
             <br>
             <div class="btn" menuClose tappable (click)="openUserProfile(profilePage)">
-              User Profile
+              <span class=" description-font user-degree">User Profile</span>
             </div>
             <br>
           </div>
